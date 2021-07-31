@@ -1,6 +1,6 @@
 #VRML_OBJ R2021b utf8
 Robot {
-  translation 1.27883e-06 0.0411838 -0.266976
+  translation 1.27883e-06 0.0411838 -0.056976
   rotation 0.5750413347912737 0.5819406555674752 0.5750413347570482 -2.087523209194689
   children [
     DEF COLOR_SENSOR Solid {
@@ -139,7 +139,7 @@ Robot {
       ]
       endPoint Solid {
         translation 0.06 -0.015 -0.04
-        rotation 0.6583861495049298 0.6583854782046679 -0.3647687489756802 2.442050445884074
+        rotation 0.65838614950493 0.658385478204668 -0.3647687489756803 2.442050445884074
         children [
           DEF WHEEL_FL Shape {
             geometry Cylinder {
@@ -166,8 +166,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.05999999999999941 0.068 -0.04
-        rotation 3.600495919555976e-07 3.6004922484370404e-07 -0.9999999999998704 1.5707953071797045
+        translation 0.0599999999999992 0.068 -0.04
+        rotation 3.600495919555994e-07 3.6004922484370447e-07 -0.9999999999998702 1.5707953071796985
         children [
           DEF WHEEL_RL Shape {
             geometry Cylinder {
@@ -1355,6 +1355,6 @@ Robot {
       0 0 0
     ]
   }
-  controller "main_sim"
+  controller "swest_demo"
   supervisor TRUE
 }

@@ -4,8 +4,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.9988908524853232 0.030508226102926982 -0.0358652054392123 0.47882381251585876
-  position -0.04495133152007481 1.243305809059084 2.2910906781641125
+  orientation -0.9992504408126243 0.03552092699018439 -0.015388966226948603 0.47856751424137206
+  position -0.04589255051323119 1.2193605268219831 2.244892614470441
 }
 TexturedBackground {
 }
@@ -178,8 +178,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.05999999999999935 0.068 -0.04
-        rotation 3.600495919555979e-07 3.6004922484370404e-07 -0.9999999999998702 1.570795307179703
+        translation 0.059999999999999325 0.068 -0.04
+        rotation 3.6004959195559816e-07 3.600492248437042e-07 -0.9999999999998704 1.5707953071797023
         children [
           DEF WHEEL_RL Shape {
             geometry Cylinder {
@@ -1367,7 +1367,7 @@ Robot {
       0 0 0
     ]
   }
-  controller "main_sim"
+  controller "swest_demo"
   supervisor TRUE
 }
 RectangleArena {

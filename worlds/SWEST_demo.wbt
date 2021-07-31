@@ -4,28 +4,15 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.1654419272008766 0.9768516101706098 0.13560936704795531 1.3500714373519607
-  position 0.7566069403378534 0.2563167034628587 -0.15518681791035666
+  orientation -0.9988908524853232 0.030508226102926982 -0.0358652054392123 0.47882381251585876
+  position -0.04495133152007481 1.243305809059084 2.2910906781641125
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
-RectangleArena {
-  name "Competition Arena"
-  floorSize 2.5 2.5
-  floorTileSize 2.5 2.5
-  floorAppearance PBRAppearance {
-    baseColorMap ImageTexture {
-      url [
-        "../imgs/ledcamp_field_prod.png"
-      ]
-    }
-    roughness 1
-  }
-}
 Robot {
-  translation 1.27883e-06 0.0411838 -0.266976
+  translation 1.27883e-06 0.0411838 -0.056976
   rotation 0.5750413347912737 0.5819406555674752 0.5750413347570482 -2.087523209194689
   children [
     DEF COLOR_SENSOR Solid {
@@ -191,8 +178,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.05999999999999941 0.068 -0.04
-        rotation 3.600495919555976e-07 3.6004922484370404e-07 -0.9999999999998704 1.5707953071797045
+        translation 0.05999999999999935 0.068 -0.04
+        rotation 3.600495919555979e-07 3.6004922484370404e-07 -0.9999999999998702 1.570795307179703
         children [
           DEF WHEEL_RL Shape {
             geometry Cylinder {
@@ -1382,4 +1369,109 @@ Robot {
   }
   controller "main_sim"
   supervisor TRUE
+}
+RectangleArena {
+  name "Competition Arena"
+  floorSize 2.5 2.5
+  floorTileSize 2.5 2.5
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../imgs/color.png"
+      ]
+    }
+    roughness 1
+  }
+}
+Solid {
+  translation -0.56 0.11 0.26
+  children [
+    DEF CYLINDER_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 1
+        metalness 0
+        name "DefaultMaterial"
+      }
+      geometry Cylinder {
+        height 0.2
+        radius 0.08
+        subdivision 12
+      }
+    }
+  ]
+  name "Competition Cylinder"
+  boundingObject USE CYLINDER_SHAPE
+  physics Physics {
+    mass 0.6
+  }
+}
+Solid {
+  translation -0.36 0.11 -0.41
+  children [
+    DEF CYLINDER_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 1
+        metalness 0
+        name "DefaultMaterial"
+      }
+      geometry Cylinder {
+        height 0.2
+        radius 0.08
+        subdivision 12
+      }
+    }
+  ]
+  name "Competition Cylinder(1)"
+  boundingObject USE CYLINDER_SHAPE
+  physics Physics {
+    mass 0.6
+  }
+}
+Solid {
+  translation 0.3 0.11 -0.41
+  children [
+    DEF CYLINDER_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 1
+        metalness 0
+        name "DefaultMaterial"
+      }
+      geometry Cylinder {
+        height 0.2
+        radius 0.08
+        subdivision 12
+      }
+    }
+  ]
+  name "Competition Cylinder(2)"
+  boundingObject USE CYLINDER_SHAPE
+  physics Physics {
+    mass 0.6
+  }
+}
+Solid {
+  translation 0.46 0.11 0.51
+  children [
+    DEF CYLINDER_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 1
+        metalness 0
+        name "DefaultMaterial"
+      }
+      geometry Cylinder {
+        height 0.2
+        radius 0.08
+        subdivision 12
+      }
+    }
+  ]
+  name "Competition Cylinder(3)"
+  boundingObject USE CYLINDER_SHAPE
+  physics Physics {
+    mass 0.6
+  }
 }

@@ -8,8 +8,15 @@
 // <webots/DistanceSensor.hpp>, <webots/Motor.hpp>, etc.
 // and/or to add some other includes
 #include <webots/Robot.hpp>
+#include <webots/Camera.hpp>
+#include <webots/DistanceSensor.hpp>
 #include <webots/Motor.hpp>
 #include <webots/Keyboard.hpp>
+
+#define TIME_STEP 64
+
+//#define USE_CAMERA_SENSOR
+//#define USE_DISTANCE_SENSOR
 
 // All the webots classes are defined in the "webots" namespace
 using namespace webots;
@@ -30,6 +37,14 @@ int main(int argc, char **argv) {
   motorR->setPosition(INFINITY);
   motorL->setVelocity(0);
   motorR->setVelocity(0);
+  #ifdef USE_CAMERA_SENSOR
+  Camera *cam = robot->getCamera("cam");
+  cam->enable(TIME_STEP);
+  #endif
+  #ifdef USE_DISTANCE_SENSOR
+  DistanceSensor *ds = robot->getDistanceSensor("RangeSensor");
+  ds->enable(TIME_STEP);
+  #endif
 
   Keyboard keyboard = Keyboard();
   keyboard.enable(100);
@@ -71,6 +86,9 @@ int main(int argc, char **argv) {
       default:
       break;
     }
+    #ifdef USE_DISTANCE_SENSOR
+    printf("distance:%f \n", ds->getValue());
+    #endif
   };
 
   // Enter here exit cleanup code.

@@ -2,7 +2,7 @@
 
 ## 遊び方（Win環境を想定）
 1. Webotsをインストールします
-2. 子のリポジトリを適当な場所にCloneします
+2. このリポジトリを適当な場所にCloneします
 3. `worlds/SWEST_demo.wbt`をダブルクリックしてWebotsで開きます
 4. `File` > `Open Text File`から`controllers` > `swest_demo` > `swest_demo.cpp` を選択
 5. `Build` > `Build` (あるいはF7キー)を押してプログラムをビルド

@@ -1,6 +1,6 @@
 #VRML_OBJ R2021b utf8
 Robot {
-  translation 1.27883e-06 0.0411838 -0.056976
+  translation 0.779945 0.0504867 -0.166976
   rotation 0.5750413347912737 0.5819406555674752 0.5750413347570482 -2.087523209194689
   children [
     DEF COLOR_SENSOR Solid {
@@ -18,6 +18,7 @@ Robot {
           name "cam"
           width 1
           height 1
+          noise 0.03
         }
         LED {
           translation 0 -0.005 0
@@ -42,10 +43,10 @@ Robot {
           lookupTable [
             0 0 0
             0.1 0 0
-            0.5 50 0.05
-            1 100 0.1
-            1.5 150 0.2
-            5 500 0.5
+            0.5 50 0.1
+            1 100 0.045
+            1.5 150 0.04
+            5 500 0.06
           ]
         }
         Shape {
@@ -107,8 +108,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.06 0.068 -0.04
-        rotation 9.076779023937477e-10 9.076769769113461e-10 -0.9999999999999999 1.570795307179577
+        translation -0.059999999999999984 0.068 -0.04
+        rotation 9.07677980897884e-10 9.076768984067396e-10 -0.9999999999999999 1.5707953071795764
         children [
           DEF WHEEL_RR Shape {
             geometry Cylinder {
@@ -118,6 +119,7 @@ Robot {
           }
         ]
         name "solid(5)"
+        contactMaterial "tankWheel"
         boundingObject USE WHEEL_RR
         physics Physics {
         }
@@ -131,6 +133,7 @@ Robot {
       device [
         PositionSensor {
           name "positionSensorL"
+          noise 0.02
         }
         RotationalMotor {
           name "motorL"
@@ -139,7 +142,7 @@ Robot {
       ]
       endPoint Solid {
         translation 0.06 -0.015 -0.04
-        rotation 0.65838614950493 0.658385478204668 -0.3647687489756803 2.442050445884074
+        rotation 0.6583861495049298 0.6583854782046679 -0.3647687489756802 2.442050445884074
         children [
           DEF WHEEL_FL Shape {
             geometry Cylinder {
@@ -149,6 +152,7 @@ Robot {
           }
         ]
         name "solid(4)"
+        contactMaterial "tankWheel"
         boundingObject USE WHEEL_FL
         physics Physics {
         }
@@ -166,8 +170,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.0599999999999992 0.068 -0.04
-        rotation 3.600495919555994e-07 3.6004922484370447e-07 -0.9999999999998702 1.5707953071796985
+        translation 0.059999999999998534 0.068 -0.04
+        rotation 3.6004959172009124e-07 3.600492248437044e-07 -0.9999999999998704 1.5707953071796787
         children [
           DEF WHEEL_RL Shape {
             geometry Cylinder {
@@ -177,6 +181,7 @@ Robot {
           }
         ]
         name "solid(2)"
+        contactMaterial "tankWheel"
         boundingObject USE WHEEL_RL
         physics Physics {
         }
@@ -190,6 +195,7 @@ Robot {
       device [
         PositionSensor {
           name "positionSensorR"
+          noise 0.02
         }
         RotationalMotor {
           name "motorR"
@@ -198,7 +204,7 @@ Robot {
       ]
       endPoint Solid {
         translation -0.06 -0.015 -0.04
-        rotation -0.46983018068739246 -0.4698297016415853 -0.7473417242270307 1.857996395006181
+        rotation -0.46983018068739485 -0.4698297016415853 -0.7473417242270293 1.857996395006175
         children [
           DEF WHEEL_FR Shape {
             geometry Cylinder {
@@ -208,6 +214,7 @@ Robot {
           }
         ]
         name "solid(3)"
+        contactMaterial "tankWheel"
         boundingObject USE WHEEL_FR
         physics Physics {
         }
@@ -1355,6 +1362,6 @@ Robot {
       0 0 0
     ]
   }
-  controller "swest_demo"
+  controller "main_sim"
   supervisor TRUE
 }

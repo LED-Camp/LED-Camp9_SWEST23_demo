@@ -1,27 +1,26 @@
-#VRML_OBJ R2021a utf8
+#VRML_OBJ R2021b utf8
 Solid {
-    locked FALSE
-    children [
-        DEF CYLINDER_SHAPE Shape {
-                appearance PBRAppearance {
-                baseColor 0.8 0.8 0.8
-                roughness 1
-                metalness 0
-                name "DefaultMaterial"
-            }
-            geometry Cylinder {
-                bottom      TRUE
-                height      0.20
-                radius      0.08
-                side        TRUE
-                top         TRUE
-                subdivision 12
-            }
-        }
-    ]
-    boundingObject USE CYLINDER_SHAPE
-    physics Physics {
-        mass 0.6
+  translation 0 0.46 0.37
+  children [
+    DEF CYLINDER_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 1
+        metalness 0
+        name "DefaultMaterial"
+      }
+      geometry Cylinder {
+        height 0.2
+        radius 0.08
+        subdivision 12
+      }
     }
-    name "Competition Cylinder"
+  ]
+  name "Competition Cylinder(1)"
+  contactMaterial "cylinder"
+  boundingObject USE CYLINDER_SHAPE
+  physics Physics {
+    density -1
+    mass 0.6
+  }
 }

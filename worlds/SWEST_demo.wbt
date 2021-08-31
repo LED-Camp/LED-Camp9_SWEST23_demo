@@ -2,6 +2,7 @@
 WorldInfo {
   FPS 30
   coordinateSystem "NUE"
+  randomSeed -1
   contactProperties [
     ContactProperties {
       material1 "arenaGround"
@@ -185,7 +186,7 @@ Robot {
       ]
       endPoint Solid {
         translation 0.06 -0.015 -0.04
-        rotation 0.65838614950493 0.658385478204668 -0.3647687489756803 2.442050445884074
+        rotation 0.6583861495049298 0.6583854782046679 -0.3647687489756802 2.442050445884074
         children [
           DEF WHEEL_FL Shape {
             geometry Cylinder {
@@ -213,8 +214,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.05999999999999838 0.068 -0.04
-        rotation 3.600495917200923e-07 3.600492248437045e-07 -0.9999999999998702 1.570795307179674
+        translation 0.05999999999999837 0.068 -0.04
+        rotation 3.6004959172009256e-07 3.600492248437046e-07 -0.9999999999998704 1.5707953071796734
         children [
           DEF WHEEL_RL Shape {
             geometry Cylinder {

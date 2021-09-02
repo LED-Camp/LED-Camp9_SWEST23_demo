@@ -12,12 +12,14 @@
 #include <webots/DistanceSensor.hpp>
 #include <webots/Motor.hpp>
 #include <webots/Keyboard.hpp>
+#include <webots/PositionSensor.hpp>
 
 #define TIME_STEP 64
 
-//#define USE_CAMERA_SENSOR
-//#define USE_DISTANCE_SENSOR
+#define USE_CAMERA_SENSOR
+#define USE_DISTANCE_SENSOR
 #define USE_LINE_SENSOR
+#define USE_POSITION_SENSOR
 
 // All the webots classes are defined in the "webots" namespace
 using namespace webots;
@@ -57,6 +59,15 @@ int main(int argc, char **argv) {
   lsRight->enable(TIME_STEP);
   lsCenter->enable(TIME_STEP);
   lsLeft->enable(TIME_STEP);
+  #endif
+  #ifdef USE_POSITION_SENSOR
+  PositionSensor *psRight = robot->getPositionSensor("positionSensorL");
+  PositionSensor *psLeft = robot->getPositionSensor("positionSensorR");
+  psRight->enable(TIME_STEP);
+  psLeft->enable(TIME_STEP);
+  float leftInitValue, rightInitValue;
+  leftInitValue = psLeft->getValue();
+  rightInitValue = psRight->getValue();
   #endif
 
   Keyboard keyboard = Keyboard();
@@ -108,6 +119,10 @@ int main(int argc, char **argv) {
      lsCenter->getValue() > LINE_THREASH ? 0 : 1, 
      lsRight->getValue() > LINE_THREASH ? 0 : 1
      );
+    #endif
+    #ifdef USE_POSITION_SENSOR
+    printf("motor left:%f, right:%f \n", psLeft->getValue(), 
+    psRight->getValue() );
     #endif
   };
 

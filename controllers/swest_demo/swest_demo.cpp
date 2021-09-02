@@ -17,6 +17,7 @@
 
 //#define USE_CAMERA_SENSOR
 //#define USE_DISTANCE_SENSOR
+#define USE_LINE_SENSOR
 
 // All the webots classes are defined in the "webots" namespace
 using namespace webots;
@@ -28,6 +29,10 @@ using namespace webots;
 // a controller program.
 // The arguments of the main function can be specified by the
 // "controllerArgs" field of the Robot node
+#ifdef USE_LINE_SENSOR
+  #define LINE_THREASH 400.0
+#endif
+
 int main(int argc, char **argv) {
   // create the Robot instance.
   Robot *robot = new Robot();
@@ -44,6 +49,14 @@ int main(int argc, char **argv) {
   #ifdef USE_DISTANCE_SENSOR
   DistanceSensor *ds = robot->getDistanceSensor("RangeSensor");
   ds->enable(TIME_STEP);
+  #endif
+  #ifdef USE_LINE_SENSOR
+  DistanceSensor *lsRight = robot->getDistanceSensor("LineSensorRight");
+  DistanceSensor *lsCenter = robot->getDistanceSensor("LineSensorCenter");
+  DistanceSensor *lsLeft = robot->getDistanceSensor("LineSensorLeft");
+  lsRight->enable(TIME_STEP);
+  lsCenter->enable(TIME_STEP);
+  lsLeft->enable(TIME_STEP);
   #endif
 
   Keyboard keyboard = Keyboard();
@@ -88,6 +101,13 @@ int main(int argc, char **argv) {
     }
     #ifdef USE_DISTANCE_SENSOR
     printf("distance:%f \n", ds->getValue());
+    #endif
+    #ifdef USE_LINE_SENSOR
+    printf("line left:%d, center:%d, right:%d \n", 
+     lsLeft->getValue() > LINE_THREASH ? 0 : 1, 
+     lsCenter->getValue() > LINE_THREASH ? 0 : 1, 
+     lsRight->getValue() > LINE_THREASH ? 0 : 1
+     );
     #endif
   };
 

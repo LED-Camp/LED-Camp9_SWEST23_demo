@@ -214,8 +214,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.05999999999999837 0.068 -0.04
-        rotation 3.6004959172009256e-07 3.600492248437046e-07 -0.9999999999998704 1.5707953071796734
+        translation 0.05999999999999831 0.068 -0.04
+        rotation 3.6004959172009293e-07 3.600492248437047e-07 -0.9999999999998702 1.5707953071796719
         children [
           DEF WHEEL_RL Shape {
             geometry Cylinder {
@@ -273,7 +273,7 @@ Robot {
       ]
       name "solid(1)"
       boundingObject Box {
-        size 0.01 0.05 0.05
+        size 0.02 0.05 0.05
       }
       physics Physics {
       }
@@ -286,7 +286,7 @@ Robot {
         }
       ]
       boundingObject Box {
-        size 0.01 0.05 0.05
+        size 0.02 0.05 0.05
       }
       physics Physics {
       }

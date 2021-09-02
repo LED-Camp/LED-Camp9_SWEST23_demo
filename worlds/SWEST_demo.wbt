@@ -18,8 +18,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.9999456576305432 0.007520810617526565 0.007219362400898032 5.4423235221746395
-  position 0.004889334236835852 3.074509426385813 2.904671997987391
+  orientation 0.9998631371650055 -0.002358754106132554 0.016375079163782336 5.393614003190547
+  position -0.05600014952922187 3.570443311578138 2.9929261955699853
 }
 TexturedBackground {
 }
@@ -211,8 +211,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.05999999999999824 0.068 -0.04
-        rotation 3.6004959172009346e-07 3.6004922484370484e-07 -0.9999999999998704 1.5707953071796696
+        translation 0.059999999999998214 0.068 -0.04
+        rotation 3.600495917200937e-07 3.6004922484370484e-07 -0.9999999999998702 1.5707953071796692
         children [
           DEF WHEEL_RL Shape {
             geometry Cylinder {
@@ -1407,7 +1407,7 @@ Robot {
   supervisor TRUE
 }
 Solid {
-  translation 0 0.69 0.37
+  translation 0 0.69 0.08
   children [
     DEF CYLINDER_SHAPE Shape {
       appearance PBRAppearance {
@@ -1432,7 +1432,7 @@ Solid {
   }
 }
 Solid {
-  translation 0.24 0.69 0.69
+  translation -0.08 0.69 0.43
   children [
     DEF CYLINDER_SHAPE Shape {
       appearance PBRAppearance {
@@ -1457,7 +1457,7 @@ Solid {
   }
 }
 Solid {
-  translation 0.39 0.69 -0.05
+  translation 0.39 0.69 -0.44
   children [
     DEF CYLINDER_SHAPE Shape {
       appearance PBRAppearance {
@@ -1482,7 +1482,7 @@ Solid {
   }
 }
 Solid {
-  translation 0.39 0.69 1
+  translation 0.39 0.69 0.5
   children [
     DEF CYLINDER_SHAPE Shape {
       appearance PBRAppearance {
@@ -1507,7 +1507,7 @@ Solid {
   }
 }
 Solid {
-  translation -0.47 0.69 0.83
+  translation -0.47 0.69 0.21
   children [
     DEF CYLINDER_SHAPE Shape {
       appearance PBRAppearance {
@@ -1532,7 +1532,7 @@ Solid {
   }
 }
 Solid {
-  translation -0.34 0.69 -0.16
+  translation -0.34 0.69 -0.55
   children [
     DEF CYLINDER_SHAPE Shape {
       appearance PBRAppearance {

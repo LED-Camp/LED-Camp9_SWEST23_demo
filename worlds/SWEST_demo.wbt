@@ -14,15 +14,12 @@ WorldInfo {
     ContactProperties {
       material1 "cylinder"
       material2 "arenaGround"
-      coulombFriction [
-        0.8
-      ]
     }
   ]
 }
 Viewpoint {
-  orientation 0.9998833470857773 -0.015026781394416426 -0.002736432251582379 5.452249118400431
-  position 0.027289952952612627 3.063303196552193 2.915119931049074
+  orientation 0.9999456576305432 0.007520810617526565 0.007219362400898032 5.4423235221746395
+  position 0.004889334236835852 3.074509426385813 2.904671997987391
 }
 TexturedBackground {
 }
@@ -214,8 +211,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.05999999999999827 0.068 -0.04
-        rotation 3.600495917200931e-07 3.6004922484370473e-07 -0.9999999999998702 1.570795307179671
+        translation 0.05999999999999824 0.068 -0.04
+        rotation 3.6004959172009346e-07 3.6004922484370484e-07 -0.9999999999998704 1.5707953071796696
         children [
           DEF WHEEL_RL Shape {
             geometry Cylinder {
@@ -1410,7 +1407,7 @@ Robot {
   supervisor TRUE
 }
 Solid {
-  translation -0.23 0.46 0.37
+  translation 0 0.69 0.37
   children [
     DEF CYLINDER_SHAPE Shape {
       appearance PBRAppearance {
@@ -1435,7 +1432,7 @@ Solid {
   }
 }
 Solid {
-  translation 0.57 0.46 -0.37
+  translation 0.24 0.69 0.69
   children [
     DEF CYLINDER_SHAPE Shape {
       appearance PBRAppearance {
@@ -1460,7 +1457,7 @@ Solid {
   }
 }
 Solid {
-  translation -0.39 0.46 -0.15
+  translation 0.39 0.69 -0.05
   children [
     DEF CYLINDER_SHAPE Shape {
       appearance PBRAppearance {
@@ -1485,7 +1482,7 @@ Solid {
   }
 }
 Solid {
-  translation 0.24 0.46 0.84
+  translation 0.39 0.69 1
   children [
     DEF CYLINDER_SHAPE Shape {
       appearance PBRAppearance {
@@ -1510,7 +1507,7 @@ Solid {
   }
 }
 Solid {
-  translation 0.71 0.46 0.66
+  translation -0.47 0.69 0.83
   children [
     DEF CYLINDER_SHAPE Shape {
       appearance PBRAppearance {
@@ -1527,6 +1524,31 @@ Solid {
     }
   ]
   name "Competition Cylinder(5)"
+  contactMaterial "cylinder"
+  boundingObject USE CYLINDER_SHAPE
+  physics Physics {
+    density -1
+    mass 0.6
+  }
+}
+Solid {
+  translation -0.34 0.69 -0.16
+  children [
+    DEF CYLINDER_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        roughness 1
+        metalness 0
+        name "DefaultMaterial"
+      }
+      geometry Cylinder {
+        height 0.2
+        radius 0.08
+        subdivision 12
+      }
+    }
+  ]
+  name "Competition Cylinder(6)"
   contactMaterial "cylinder"
   boundingObject USE CYLINDER_SHAPE
   physics Physics {
